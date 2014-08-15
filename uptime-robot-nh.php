@@ -1,10 +1,10 @@
 <?php defined('ABSPATH') or die("No script kiddies please!");
 /*
 Plugin Name: Uptime Robot Plugin for Wordpress
-Plugin URI: http://nielshoogenhout.be
-Description: Uptime Robot Plugin for Wordpress let's you show you uptime stats from uptimerobot.com on your wordpress pages.
+Plugin URI: nielshoogenhout.be/en/blog/uptime-robot-wordpress-plugin/
+Description: Show you uptime stats from Uptime Robot on your wordpress pages.
 Author: Niels Hoogenhout
-Version: 1.0.1
+Version: 1.1.0
 Author URI: http://nielshoogenhout.be
 */
 
@@ -16,35 +16,42 @@ register_uninstall_hook( __FILE__, 'uptime_robot_nh_delete');
 
 function uptime_robot_nh_widget() {
 echo "<table width=\"100%\"><tr>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('Monitor', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('Status', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('Type', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('Today', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('7 days', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('30 days', 'uptime-robot-nh')."</th>
-<th style=\"font-size: 13px; font-size: 13px; text-align: left;\">". __('Last year', 'uptime-robot-nh')."</th>
-</tr>";
-$url = "http://api.uptimerobot.com/getMonitors?apiKey=". get_option('uptime_robot_nh_api','m775657602-b342a2e5f04a0e7707981fe8') . "&customUptimeRatio=1-7-30-365&logs=1&format=xml&monitors=".get_option('uptime_robot_nh_monitors','775657602');
+<th style=\"text-align: left;\">". __('Monitor', 'uptime-robot-nh')."</th>";
+	if(get_option('uptime_robot_nh_columns_status','1') == 1){
+echo "<th style=\"text-align: left;\">". __('Status', 'uptime-robot-nh')."</th>";
+	} if(get_option('uptime_robot_nh_columns_type','1') == 1){
+echo "<th style=\"text-align: left;\">". __('Type', 'uptime-robot-nh')."</th>";
+	} $GetUptimes = "0"; if(get_option('uptime_robot_nh_days_one','1') == 1){ $GetUptimes = "1-";
+echo "<th style=\"text-align: left;\">". __('Today', 'uptime-robot-nh')."</th>";
+	} if(get_option('uptime_robot_nh_days_week','1') == 1){ $GetUptimes = $GetUptimes."7-";
+echo "<th style=\"text-align: left;\">". __('7 days', 'uptime-robot-nh')."</th>";
+	} if(get_option('uptime_robot_nh_days_month','1') == 1){ $GetUptimes = $GetUptimes."30-";
+echo "<th style=\"text-align: left;\">". __('30 days', 'uptime-robot-nh')."</th>";
+	} if(get_option('uptime_robot_nh_days_year','1') == 1){ $GetUptimes = $GetUptimes."365-";
+echo "<th style=\"text-align: left;\">". __('Last', 'uptime-robot-nh')." ". __('year', 'uptime-robot-nh')."</th>";
+	}
+echo "</tr>";
+$url = "http://api.uptimerobot.com/getMonitors?apiKey=". get_option('uptime_robot_nh_api','m775657602-b342a2e5f04a0e7707981fe8') . "&customUptimeRatio=".substr($GetUptimes, 0, -1)."&logs=1&format=xml&monitors=".get_option('uptime_robot_nh_monitors','775657602');
 $xml = file_get_contents($url);
 $xml = new SimpleXMLElement ($xml);
 foreach($xml->monitor as $monitor) {
   echo "<tr>";
-  echo "<td style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #6B6B6B;\">";
+  echo "<td style=\"color: #6B6B6B;\">";
   echo $monitor['friendlyname'];
   echo "</td>";
-
+	if(get_option('uptime_robot_nh_columns_status','1') == 1){
   echo "</td><td>";
   if ($monitor['status'] == 2) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #006600; font-weight:bold;\">". __('Online', 'uptime-robot-nh'). "</div>";
+    echo "<div style=\"color: #006600; font-weight:bold;\">". __('Online', 'uptime-robot-nh'). "</div>";
   }
   elseif ($monitor['status'] == 9) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF0000; font-weight:bold;\">". __('Offline', 'uptime-robot-nh'). "</div>";
+    echo "<div style=\"color: #FF0000; font-weight:bold;\">". __('Offline', 'uptime-robot-nh'). "</div>";
   }
   else {
-    _e('Not Available', 'uptime-robot-nh');
+    _e('n&#47a', 'uptime-robot-nh');
   }
-
-  echo "<td style=\"font-size: 13px; text-align: left; font-family: 'Open Sans', sans-serif; color: #6B6B6B;\">";
+	} if(get_option('uptime_robot_nh_columns_type','1') == 1){
+  echo "<td style=\"color: #6B6B6B;\">";
   if ($monitor['type'] == 1) {
     _e('HTTP(s)', 'uptime-robot-nh'); echo "</td>";
   }elseif ($monitor['type'] == 2) {
@@ -68,53 +75,24 @@ foreach($xml->monitor as $monitor) {
   }else{
     _e('PORT', 'uptime-robot-nh'); echo "(".$monitor['port'].")</td>";
   }
+	}
 
+if($GetUptimes != 0){
 $uptimes = explode("-", $monitor['customuptimeratio']);
 
+ foreach ($uptimes as $uptime) {
   echo "</td><td>";
-  if ($uptimes[0] == 100 OR $uptimes[0] == 0) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #006600; font-weight:bold;\">100%</div></td>";
-  }elseif ($uptimes[0] > 99.9) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #009933; font-weight:bold;\">" . $uptimes[0] . "%</div></td>";
-  }elseif($uptimes[0] > 99.5) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF8C00; font-weight:bold;\">" . $uptimes[0] . "%</div></td>";
+  if ($uptime == 100 OR $uptime == 0) {
+    echo "<div style=\"color: #006600; font-weight:bold;\">100%</div></td>";
+  }elseif ($uptime > 99.9) {
+    echo "<div style=\"color: #009933; font-weight:bold;\">" . $uptime . "%</div></td>";
+  }elseif($uptime > 99.5) {
+    echo "<div style=\"color: #FF8C00; font-weight:bold;\">" . $uptime . "%</div></td>";
   }else{
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF0000; font-weight:bold;\">" . $uptimes[0] . "%</div></td>";
+    echo "<div style=\"color: #FF0000; font-weight:bold;\">" . $uptime . "%</div></td>";
   }
-
-  echo "</td><td>";
-  if ($uptimes[1] == 100 OR $uptimes[1] == 0) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #006600; font-weight:bold;\">100%</div></td>";
-  }elseif ($uptimes[1] > 99.9) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #009933; font-weight:bold;\">" . $uptimes[1] . "%</div></td>";
-  }elseif($uptimes[1] > 99.5) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF8C00; font-weight:bold;\">" . $uptimes[1] . "%</div></td>";
-  }else{
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF0000; font-weight:bold;\">" . $uptimes[1] . "%</div></td>";
-  }
-
-  echo "</td><td>";
-  if ($uptimes[2] == 100 OR $uptimes[2] == 0) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #006600; font-weight:bold;\">100%</div></td>";
-  }elseif ($uptimes[2] > 99.9) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #009933; font-weight:bold;\">" . $uptimes[2] . "%</div></td>";
-  }elseif ($uptimes[2] > 99.5) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF8C00; font-weight:bold;\">" . $uptimes[2] . "%</div></td>";
-  }else{
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF0000; font-weight:bold;\">" . $uptimes[2] . "%</div></td>";
-  }
-
-  echo "</td><td>";
-  if ($uptimes[3] == 100 OR $uptimes[3] == 0) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #006600; font-weight:bold;\">100%</div></td></tr>";
-  }elseif ($uptimes[3] > 99.9) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #009933; font-weight:bold;\">" . $uptimes[3] . "%</div></td></tr>";
-  }elseif($uptimes[3] > 99.5) {
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF8C00; font-weight:bold;\">" . $uptimes[3] . "%</div></td></tr>";
-  }else{
-    echo "<div style=\"font-size: 13px; font-family: 'Open Sans', sans-serif; color: #FF0000; font-weight:bold;\">" . $uptimes[3] . "%</div></td></tr>";
-  }
-
+ }
+}
 }
 
 echo "</table>";
@@ -147,17 +125,49 @@ function uptime_robot_plugin_options() {
         <?php @settings_fields('uptime_robot_options_group'); ?>
         <?php @do_settings_fields('uptime_robot_options_group'); ?>
 
+	<h3><?php _e('API connection settings', 'uptime-robot-nh'); ?></h3>
         <table class="form-table">  
             <tr valign="top">
                 <th scope="row"><label for="uptime_robot_nh_api">Uptime Robot API</label></th>
-                <td><input type="text" name="uptime_robot_nh_api" id="uptime_robot_nh_api" value="<?php echo get_option('uptime_robot_nh_api') ?>" /></td>
-		<td><?php _e('Copy you Main API Key from the Uptime Robot settings page.', 'uptime-robot-nh'); ?></td>
+                <td><input type="text" size="50" name="uptime_robot_nh_api" id="uptime_robot_nh_api" value="<?php echo get_option('uptime_robot_nh_api') ?>" /></td>
+		<td><span class="description"><?php _e('Copy you &#40Main&#41 API Key from the Uptime Robot settings page.', 'uptime-robot-nh'); ?></span></td>
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="uptime_robot_nh_monitors"><?php _e('Monitors', 'uptime-robot-nh'); ?></label></th>
-                <td><input type="text" name="uptime_robot_nh_monitors" id="uptime_robot_nh_monitors" value="<?php echo get_option('uptime_robot_nh_monitors'); ?>" /></td>
+                <td><input type="text" size="50" name="uptime_robot_nh_monitors" id="uptime_robot_nh_monitors" value="<?php echo get_option('uptime_robot_nh_monitors'); ?>" /></td>
+		<td><span class="description"><?php _e('Copy your monitor ID\'s in this field seperated with a - (dash). You can find your monitor ID in your adressbar when the monitors dashboard is open.', 'uptime-robot-nh'); ?></span></td>
+            </tr>
+        </table>
 
-		<td><?php _e('Copy your monitor ID\'s in this field seperated with a - (dash). You can find your monitor ID in your adressbar when the monitors dashboard is open.', 'uptime-robot-nh'); ?></td>
+                <h3><?php _e('What columns would you like to show?', 'uptime-robot-nh'); ?></h3>
+        <table class="form-table" width="50">
+	    <tr><th scope="row"><?php _e('Status', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_columns_status" id="uptime_robot_nh_columns_status" value="1" <?php checked( '1', get_option( 'uptime_robot_nh_columns_status' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_columns_status" id="uptime_robot_nh_columns_status" value="0" <?php checked( '0', get_option( 'uptime_robot_nh_columns_status' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
+            </tr>
+	    <tr><th scope="row"><?php _e('Monitor', 'uptime-robot-nh'); ?> <?php _e('type', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_columns_type" id="uptime_robot_nh_columns_type" value="1" <?php checked( '1', get_option( 'uptime_robot_nh_columns_type' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_columns_type" id="uptime_robot_nh_columns_type" value="0" <?php checked( '0', get_option( 'uptime_robot_nh_columns_type' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
+            </tr>
+        </table>
+
+                <h3><?php _e('What time periodes would you like to show?', 'uptime-robot-nh'); ?></h3>
+        <table class="form-table" width="50">
+	    <tr><th scope="row"><?php _e('Today', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_days_one" id="uptime_robot_nh_days_one" value="1" <?php checked( '1', get_option( 'uptime_robot_nh_days_one' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_days_one" id="uptime_robot_nh_days_one" value="0" <?php checked( '0', get_option( 'uptime_robot_nh_days_one' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
+            </tr>
+	    <tr><th scope="row"><?php _e('Last', 'uptime-robot-nh'); ?> <?php _e('7 days', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_days_week" id="uptime_robot_nh_days_week" value="1"  <?php checked( '1', get_option( 'uptime_robot_nh_days_week' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_days_week" id="uptime_robot_nh_days_week" value="0"  <?php checked( '0', get_option( 'uptime_robot_nh_days_week' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
+            </tr>
+	    <tr><th scope="row"><?php _e('Last', 'uptime-robot-nh'); ?> <?php _e('30 days', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_days_month" id="uptime_robot_nh_days_month" value="1"  <?php checked( '1', get_option( 'uptime_robot_nh_days_month' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_days_month" id="uptime_robot_nh_days_month" value="0"  <?php checked( '0', get_option( 'uptime_robot_nh_days_month' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
+            </tr>
+	    <tr><th scope="row"><?php _e('Last', 'uptime-robot-nh'); ?> <?php _e('year', 'uptime-robot-nh'); ?></th>
+		<td><input type="radio" name="uptime_robot_nh_days_year" id="uptime_robot_nh_days_year" value="1"  <?php checked( '1', get_option( 'uptime_robot_nh_days_year' ) ); ?> > <?php _e('Yes', 'uptime-robot-nh'); ?> 
+		<input type="radio" name="uptime_robot_nh_days_year" id="uptime_robot_nh_days_year" value="0"  <?php checked( '0', get_option( 'uptime_robot_nh_days_year' ) ); ?> > <?php _e('No', 'uptime-robot-nh'); ?></td>
             </tr>
         </table>
 
@@ -171,7 +181,13 @@ function uptime_robot_plugin_options() {
 function register_setting_uptime_robot() {
 	register_setting('uptime_robot_options_group', 'uptime_robot_nh_api'); 
 	register_setting('uptime_robot_options_group', 'uptime_robot_nh_monitors'); 
-} 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_columns_status'); 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_columns_type'); 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_days_one'); 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_days_week'); 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_days_month'); 
+	register_setting('uptime_robot_options_group', 'uptime_robot_nh_days_year'); 
+}
 
 add_action( 'init', array($this, 'load_plugin_textdomain') );
 add_action( 'init', 'register_shortcodes_uptime_robot');
