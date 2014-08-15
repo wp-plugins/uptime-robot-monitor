@@ -39,5 +39,8 @@ http://nielshoogenhout.be/en/support/uptime-monitor/
 = 1.0.0 =
 * First version
 
+= 1.0.1 =
+* Translations Fix
+
 == Upgrade Notice ==
 First version
