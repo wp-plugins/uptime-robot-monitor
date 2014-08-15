@@ -4,7 +4,7 @@ Plugin Name: Uptime Robot Plugin for Wordpress
 Plugin URI: http://nielshoogenhout.be
 Description: Uptime Robot Plugin for Wordpress let's you show you uptime stats from uptimerobot.com on your wordpress pages.
 Author: Niels Hoogenhout
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://nielshoogenhout.be
 */
 
