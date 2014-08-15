@@ -1,28 +1,31 @@
 === Plugin Name ===
 Contributors: vlijmen
 Donate link: http://nielshoogenhout.be
-Tags: uptime, uptimerobot, monitoring
+Tags: uptime, uptimerobot, monitoring, pages, shortcode, dutch, english
 Requires at least: 3.0.1
 Tested up to: 3.9.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Uptime Robot Plugin for Wordpress let's you show you uptime stats from uptimerobot.com on your wordpress pages.
+Show you uptime stats from Uptime Robot on your wordpress pages.
 
 == Description ==
 
-Uptime Robot Plugin for Wordpress let's you show you uptime stats from uptimerobot.com on your wordpress pages. You can show multiple monitors on one page using a simpel shortcode.
+Uptime Robot Plugin for Wordpress let's you show you uptime stats from http://uptimerobot.com on your wordpress pages. You can show multiple monitors on one page using a simpel shortcode.
 
-* Account at uptimerobot.com required
+* Account at http://uptimerobot.com required
 * Translated in Dutch and English
+* Simple installation and configuration
+* Display on pages, posts or in a widget with a shortcode [uptime-robot-nh]
+* Dashboard widget for messages
 
 == Installation ==
 
 1. Upload the files and folder in the zip file 'uptime-robot-nh' to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Enter you API Key and monitor id(s) on the settings page
-4. Place [uptime-robot-nh] in your post or page
+4. Place [uptime-robot-nh] in your page, post or text widget
 
 == Frequently Asked Questions ==
 
@@ -31,16 +34,23 @@ Made a translation? Send it to me!
 
 == Screenshots ==
 
-No screenshots available, live demo at:
-http://nielshoogenhout.be/en/support/uptime-monitor/
+1. Plugin settings page
+2. Plugin in action on a page
+3. Plugin used in a widget
+4. Plugin used in a widget different
+
+Live demo at: http://nielshoogenhout.be/en/support/uptime-monitor/
 
 == Changelog ==
+
+= 1.1.0 =
+* Updated translations
+* Added more settings to choose the time displayed
+* Changed CSS settings
+* More settings included for customization columns
 
 = 1.0.0 =
 * First version
 
-= 1.0.1 =
-* Translations Fix
-
 == Upgrade Notice ==
-First version
+N/a
