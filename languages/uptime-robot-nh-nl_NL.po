@@ -1,0 +1,202 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: uptime-robot-nh-nl_NL\n"
+"POT-Creation-Date: 2014-08-16 11:11+0100\n"
+"PO-Revision-Date: 2014-08-16 11:11+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../uptime-robot-nh.php:19 ../uptime-robot-nh.php:168
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../uptime-robot-nh.php:21 ../uptime-robot-nh.php:165
+msgid "Status"
+msgstr "Status"
+
+#: ../uptime-robot-nh.php:23
+msgid "Type"
+msgstr "Type"
+
+#: ../uptime-robot-nh.php:25 ../uptime-robot-nh.php:175
+msgid "Today"
+msgstr "Vandaag"
+
+#: ../uptime-robot-nh.php:27 ../uptime-robot-nh.php:178
+msgid "7 days"
+msgstr "7 dagen"
+
+#: ../uptime-robot-nh.php:29 ../uptime-robot-nh.php:182
+msgid "30 days"
+msgstr "30 dagen"
+
+#: ../uptime-robot-nh.php:31 ../uptime-robot-nh.php:178
+#: ../uptime-robot-nh.php:182 ../uptime-robot-nh.php:185
+msgid "Last"
+msgstr "Laatste"
+
+#: ../uptime-robot-nh.php:31 ../uptime-robot-nh.php:185
+msgid "year"
+msgstr "jaar"
+
+#: ../uptime-robot-nh.php:45
+msgid "Online"
+msgstr "Online"
+
+#: ../uptime-robot-nh.php:48
+msgid "Offline"
+msgstr "Offline"
+
+#: ../uptime-robot-nh.php:51
+msgid "Paused"
+msgstr "Gepauzeerd"
+
+#: ../uptime-robot-nh.php:54
+msgid "n&#47a"
+msgstr "n&#47a"
+
+#: ../uptime-robot-nh.php:59
+msgid "HTTP(s)"
+msgstr "HTTP(s)"
+
+#: ../uptime-robot-nh.php:61
+msgid "Keyword"
+msgstr "Keyword"
+
+#: ../uptime-robot-nh.php:63
+msgid "PING"
+msgstr "PING"
+
+#: ../uptime-robot-nh.php:65
+msgid "SSL"
+msgstr "SSL"
+
+#: ../uptime-robot-nh.php:67 ../uptime-robot-nh.php:77
+#: ../uptime-robot-nh.php:79
+msgid "PORT"
+msgstr "POORT"
+
+#: ../uptime-robot-nh.php:69
+msgid "FTP"
+msgstr "FTP"
+
+#: ../uptime-robot-nh.php:71
+msgid "SMTP"
+msgstr "SMTP"
+
+#: ../uptime-robot-nh.php:73
+msgid "POP"
+msgstr "POP"
+
+#: ../uptime-robot-nh.php:75
+msgid "IMAP"
+msgstr "IMAP"
+
+#: ../uptime-robot-nh.php:123
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Je hebt niet voldoende rechten om deze pagina te bezoeken."
+
+#: ../uptime-robot-nh.php:131
+msgid "API connection settings"
+msgstr "API verbindingsinstellingen"
+
+#: ../uptime-robot-nh.php:136
+msgid "Copy you &#40Main&#41 API Key from the Uptime Robot settings page."
+msgstr "Kopieer je (Main) API Key vanuit de Uptime Robot instellingen pagina."
+
+#: ../uptime-robot-nh.php:139
+msgid "Monitors"
+msgstr "Monitors"
+
+#: ../uptime-robot-nh.php:141
+msgid ""
+"Copy your monitor ID's in this field seperated with a - (dash). You can find "
+"your monitor ID in your adressbar when the monitors dashboard is open."
+msgstr ""
+"Kopieer je monitor id's in dit veld, gescheiden met een - (streepje). Je "
+"vind je monitor ID in je adresbalk wanneer je monitor dashbord open is op "
+"uptimerobot.com"
+
+#: ../uptime-robot-nh.php:144
+msgid "Dashboard log widget settings"
+msgstr "Dashboard widget settings"
+
+#: ../uptime-robot-nh.php:146
+msgid "Show dashboard"
+msgstr "Dashboard weergeven"
+
+#: ../uptime-robot-nh.php:147 ../uptime-robot-nh.php:166
+#: ../uptime-robot-nh.php:169 ../uptime-robot-nh.php:176
+#: ../uptime-robot-nh.php:179 ../uptime-robot-nh.php:183
+#: ../uptime-robot-nh.php:186
+msgid "Yes"
+msgstr "Ja"
+
+#: ../uptime-robot-nh.php:148 ../uptime-robot-nh.php:167
+#: ../uptime-robot-nh.php:170 ../uptime-robot-nh.php:177
+#: ../uptime-robot-nh.php:180 ../uptime-robot-nh.php:184
+#: ../uptime-robot-nh.php:187
+msgid "No"
+msgstr "Nee"
+
+#: ../uptime-robot-nh.php:149
+msgid "Number of logs"
+msgstr "Aantal logs"
+
+#: ../uptime-robot-nh.php:159
+msgid "Only if dashboard widget is active"
+msgstr "Alleen wanneer dashboard widget actief is"
+
+#: ../uptime-robot-nh.php:163
+msgid "What columns would you like to show?"
+msgstr "Welke kolommen wil je weergeven?"
+
+#: ../uptime-robot-nh.php:168
+msgid "type"
+msgstr "type"
+
+#: ../uptime-robot-nh.php:173
+msgid "What time periodes would you like to show?"
+msgstr "Welke periodes wil je weergeven?"
+
+#: ../uptime-robot-nh.php:225
+msgid "down"
+msgstr "offline"
+
+#: ../uptime-robot-nh.php:227
+msgid "up"
+msgstr "online"
+
+#: ../uptime-robot-nh.php:229
+msgid "paused"
+msgstr "gepauzeerd"
+
+#: ../uptime-robot-nh.php:231
+msgid "started"
+msgstr "gestart"
+
+#~ msgid "Not Available"
+#~ msgstr "Niet beschikbaar"
+
+#~ msgid ""
+#~ "Copy your monitor ID's in this field seperated with a You can find your "
+#~ "monitor ID in your adressbar when the monitors dashboard is open."
+#~ msgstr ""
+#~ "Kopieer je monitor id's in dit veld, gescheiden met een -. Je vind je "
+#~ "monitor ID in je adresbalk wanneer je monitor dashbord open is op "
+#~ "uptimerobot.com"
+
+#~ msgid "MAIL"
+#~ msgstr "MAIL"
+
+#~ msgid "Laatste jaar"
+#~ msgstr "Laatste jaar"
