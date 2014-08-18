@@ -13,12 +13,13 @@ Show your uptime stats from Uptime Robot on your wordpress pages, posts or in a 
 == Description ==
 
 Uptime Robot Plugin for Wordpress let's you show your uptime server stats from http://uptimerobot.com on your wordpress pages, posts or in a widget. You can show multiple monitors on your preffered place using a simpel shortcode. Since V1.2 you can also added a widget to your dashboard to view the latest notifications from you uptimerobot monitors.
-* Account at http://uptimerobot.com required
-* Translated in English, Dutch and French
-* Simple installation and configuration
-* Display on pages, posts with a shortcode [uptime-robot-nh]
-* Use a widget to place it in a sidebar
-* Dashboard widget for messages
+
+- Account at http://uptimerobot.com required
+- Translated in English, Dutch and French
+- Simple installation and configuration
+- Display on pages, posts with a shortcode [uptime-robot-nh]
+- Use a widget to place it in a sidebar
+- Dashboard widget for messages
 
 Live demo at: http://nielshoogenhout.be/en/support/uptime-monitor/
 
