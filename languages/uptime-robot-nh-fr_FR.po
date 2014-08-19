@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: uptime-robot-nh-nl_NL\n"
+"POT-Creation-Date: 2014-08-17 14:30+0100\n"
+"PO-Revision-Date: 2014-08-17 14:34+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../uptime-robot-nh.php:19 ../uptime-robot-nh.php:178
+msgid "Monitor"
+msgstr "Moniteur"
+
+#: ../uptime-robot-nh.php:21 ../uptime-robot-nh.php:175
+msgid "Status"
+msgstr "Statut"
+
+#: ../uptime-robot-nh.php:23
+msgid "Type"
+msgstr "Type"
+
+#: ../uptime-robot-nh.php:25 ../uptime-robot-nh.php:185
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: ../uptime-robot-nh.php:27 ../uptime-robot-nh.php:188
+msgid "7 days"
+msgstr "7 jour"
+
+#: ../uptime-robot-nh.php:29 ../uptime-robot-nh.php:192
+msgid "30 days"
+msgstr "30 jour"
+
+#: ../uptime-robot-nh.php:31 ../uptime-robot-nh.php:188
+#: ../uptime-robot-nh.php:192 ../uptime-robot-nh.php:195
+msgid "Last"
+msgstr "Dernier"
+
+#: ../uptime-robot-nh.php:31 ../uptime-robot-nh.php:195
+msgid "year"
+msgstr "année"
+
+#: ../uptime-robot-nh.php:55
+msgid "Online"
+msgstr "En ligne"
+
+#: ../uptime-robot-nh.php:58
+msgid "Offline"
+msgstr "Hors ligne"
+
+#: ../uptime-robot-nh.php:61
+msgid "Paused"
+msgstr "Pause"
+
+#: ../uptime-robot-nh.php:64
+msgid "n&#47a"
+msgstr "n&#47a"
+
+#: ../uptime-robot-nh.php:69
+msgid "HTTP(s)"
+msgstr "HTTP(s)"
+
+#: ../uptime-robot-nh.php:71
+msgid "Keyword"
+msgstr "Mot Cléfs"
+
+#: ../uptime-robot-nh.php:73
+msgid "PING"
+msgstr "PING"
+
+#: ../uptime-robot-nh.php:75
+msgid "SSL"
+msgstr "SSL"
+
+#: ../uptime-robot-nh.php:77 ../uptime-robot-nh.php:87
+#: ../uptime-robot-nh.php:89
+msgid "PORT"
+msgstr "PORT"
+
+#: ../uptime-robot-nh.php:79
+msgid "FTP"
+msgstr "FTP"
+
+#: ../uptime-robot-nh.php:81
+msgid "SMTP"
+msgstr "SMTP"
+
+#: ../uptime-robot-nh.php:83
+msgid "POP"
+msgstr "POP"
+
+#: ../uptime-robot-nh.php:85
+msgid "IMAP"
+msgstr "IMAP"
+
+#: ../uptime-robot-nh.php:133
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n'avez pas la permission d'acces à cette page."
+
+#: ../uptime-robot-nh.php:141
+msgid "API connection settings"
+msgstr "Parametre de connexion API"
+
+#: ../uptime-robot-nh.php:146
+msgid "Copy you &#40Main&#41 API Key from the Uptime Robot settings page."
+msgstr ""
+"Copier votre &#40main&#41 clé APY du Uptime Robot dans la page de paramètre."
+
+#: ../uptime-robot-nh.php:149
+msgid "Monitors"
+msgstr "Moniteurs"
+
+#: ../uptime-robot-nh.php:151
+msgid ""
+"Copy your monitor ID's in this field seperated with a - (dash). You can find "
+"your monitor ID in your adressbar when the monitors dashboard is open."
+msgstr ""
+"copier votre moniteur IDs dans le cadre séparé les par un - (tiret). Vous "
+"pouvez trouvé votre moniteur ID dans la bare d'adresse quand le tableau de "
+"bord du moniteur est ouvert."
+
+#: ../uptime-robot-nh.php:154
+msgid "Dashboard log widget settings"
+msgstr "Paramètre du registre des zidget sur le tableau de bord"
+
+#: ../uptime-robot-nh.php:156
+msgid "Show dashboard"
+msgstr "Affichage tableau de bord"
+
+#: ../uptime-robot-nh.php:157 ../uptime-robot-nh.php:176
+#: ../uptime-robot-nh.php:179 ../uptime-robot-nh.php:186
+#: ../uptime-robot-nh.php:189 ../uptime-robot-nh.php:193
+#: ../uptime-robot-nh.php:196
+msgid "Yes"
+msgstr "Oui"
+
+#: ../uptime-robot-nh.php:158 ../uptime-robot-nh.php:177
+#: ../uptime-robot-nh.php:180 ../uptime-robot-nh.php:187
+#: ../uptime-robot-nh.php:190 ../uptime-robot-nh.php:194
+#: ../uptime-robot-nh.php:197
+msgid "No"
+msgstr "No"
+
+#: ../uptime-robot-nh.php:159
+msgid "Number of logs"
+msgstr "Nombre de journaux"
+
+#: ../uptime-robot-nh.php:169
+msgid "Only if dashboard widget is active"
+msgstr "Seulement si le tableau de bord des widget est activé"
+
+#: ../uptime-robot-nh.php:173
+msgid "What columns would you like to show?"
+msgstr "Quelle colonnes voulez-vous montré"
+
+#: ../uptime-robot-nh.php:178
+msgid "type"
+msgstr "type"
+
+#: ../uptime-robot-nh.php:183
+msgid "What time periodes would you like to show?"
+msgstr "Quelles périodes voulez-vous montré"
+
+#: ../uptime-robot-nh.php:252
+msgid "down"
+msgstr "déconecté"
+
+#: ../uptime-robot-nh.php:254
+msgid "up"
+msgstr "connecté"
+
+#: ../uptime-robot-nh.php:256
+msgid "paused"
+msgstr "pause"
+
+#: ../uptime-robot-nh.php:258
+msgid "started"
+msgstr "commencé"
+
+#~ msgid "Not Available"
+#~ msgstr "Pas disponible"
+
+#~ msgid "MAIL"
+#~ msgstr "COURRIER"
+
+#~ msgid "Laatste jaar"
+#~ msgstr "L'année dernière"
