@@ -3,7 +3,7 @@ Contributors: vlijmen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WTW7PHYKERFKY
 Tags: uptime, uptimerobot, monitoring, pages, posts, widget, dashboard, shortcode, logs, dutch, english, french, german
 Requires at least: 3.5.0
-Tested up to: 3.9.2
+Tested up to: 4.0.0
 Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
