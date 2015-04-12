@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: uptime-robot-nh-nl_NL\n"
+"POT-Creation-Date: 2015-04-12 15:47+0100\n"
+"PO-Revision-Date: 2015-04-12 15:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../uptime-robot-nh.php:56
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Je hebt niet voldoende rechten om deze pagina te bezoeken."
+
+#: ../uptime-robot-nh.php:83
+msgid "General"
+msgstr "Algemeen"
+
+#: ../uptime-robot-nh.php:83
+msgid "API-settings"
+msgstr "API instellingen"
+
+#: ../uptime-robot-nh.php:83 ../uptime-robot-nh.php:159
+msgid "Colors"
+msgstr "Kleuren"
+
+#: ../uptime-robot-nh.php:83 ../uptime-robot-nh.php:183
+msgid "Shortcodes"
+msgstr "Shortcodes"
+
+#: ../uptime-robot-nh.php:83
+msgid "Support"
+msgstr "Support"
+
+#: ../uptime-robot-nh.php:83
+msgid "Contact"
+msgstr "Contact"
+
+#: ../uptime-robot-nh.php:86
+msgid "API connection settings"
+msgstr "API verbindingsinstellingen"
+
+#: ../uptime-robot-nh.php:91
+msgid "Copy you &#40Main&#41 API Key from the Uptime Robot settings page."
+msgstr "Kopieer je (Main) API Key vanuit de Uptime Robot instellingen pagina."
+
+#: ../uptime-robot-nh.php:94
+msgid "Monitors"
+msgstr "Monitors"
+
+#: ../uptime-robot-nh.php:96
+msgid ""
+"Copy your monitor ID's in this field seperated with a - (dash). You can find "
+"your monitor ID in your adressbar when the monitors dashboard is open."
+msgstr ""
+"Kopieer je monitor id's in dit veld, gescheiden met een - (streepje). Je "
+"vind je monitor ID in je adresbalk wanneer je monitor dashbord open is op "
+"uptimerobot.com"
+
+#: ../uptime-robot-nh.php:103
+#, fuzzy
+msgid "Dashboard widget settings"
+msgstr "Dashboard widget settings"
+
+#: ../uptime-robot-nh.php:105
+msgid "Show log widget"
+msgstr "Log widget weergeven"
+
+#: ../uptime-robot-nh.php:107
+msgid "Number of logs"
+msgstr "Aantal logs"
+
+#: ../uptime-robot-nh.php:117
+#, fuzzy
+msgid "Only if dashboard log widget is active"
+msgstr "Alleen wanneer dashboard widget actief is"
+
+#: ../uptime-robot-nh.php:119
+msgid "Show monitor widget"
+msgstr "Monitor widget weergeven"
+
+#: ../uptime-robot-nh.php:124
+msgid "What columns would you like to show?"
+msgstr "Welke kolommen wil je weergeven?"
+
+#: ../uptime-robot-nh.php:126 ../ur-status.php:8
+msgid "Status"
+msgstr "Status"
+
+#: ../uptime-robot-nh.php:128 ../ur-status.php:6
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../uptime-robot-nh.php:128 ../uptime-robot-nh.php:133
+msgid "type"
+msgstr "type"
+
+#: ../uptime-robot-nh.php:131
+msgid "Uptime Robot"
+msgstr "Uptime Robot"
+
+#: ../uptime-robot-nh.php:132
+msgid ""
+"Realtime monitoring by <a href=\"http://uptimerobot.com/\" target=\"_blank"
+"\">Uptime Robot</a>"
+msgstr ""
+"Realtime monitoring door <a href=\"http://uptimerobot.com/\" target=\"_blank"
+"\">Uptime Robot</a>"
+
+#: ../uptime-robot-nh.php:133
+msgid "Wordpress Plugin"
+msgstr "Wordpress Plugin"
+
+#: ../uptime-robot-nh.php:134
+#, fuzzy
+msgid ""
+"Plugin by <a href=\"https://wordpress.org/plugins/uptime-robot-monitor/\" "
+"target=\"_blank\">Niels Hoogenhout.be</a>"
+msgstr ""
+"Plugin door <a href=\"http://nielshoogenhout.be/en/blog/uptime-robot-"
+"wordpress-plugin/\" target=\"_blank\">Niels Hoogenhout.nl</a>"
+
+#: ../uptime-robot-nh.php:138
+msgid "What time periodes would you like to show?"
+msgstr "Welke periodes wil je weergeven?"
+
+#: ../uptime-robot-nh.php:139 ../ur-status.php:12
+msgid "Today"
+msgstr "Vandaag"
+
+#: ../uptime-robot-nh.php:141 ../uptime-robot-nh.php:144
+#: ../uptime-robot-nh.php:146 ../ur-status.php:18
+msgid "Last"
+msgstr "Laatste"
+
+#: ../uptime-robot-nh.php:141 ../ur-status.php:14
+msgid "7 days"
+msgstr "7 dagen"
+
+#: ../uptime-robot-nh.php:144 ../ur-status.php:16
+msgid "30 days"
+msgstr "30 dagen"
+
+#: ../uptime-robot-nh.php:146 ../ur-status.php:18
+msgid "year"
+msgstr "jaar"
+
+#: ../uptime-robot-nh.php:161
+msgid "Font"
+msgstr "Font"
+
+#: ../uptime-robot-nh.php:164 ../ur-status.php:37
+msgid "Online"
+msgstr "Online"
+
+#: ../uptime-robot-nh.php:166 ../ur-status.php:40
+msgid "Offline"
+msgstr "Offline"
+
+#: ../uptime-robot-nh.php:184
+msgid ""
+"Use this shortcode on any page or post to display your uptime robot stats."
+msgstr ""
+"Gebruik deze shortcode om je uptime robot stats te plaatsen in een pagina of "
+"bericht."
+
+#: ../uptime-robot-nh.php:185
+msgid ""
+"Use this shortcode on any page or post to display your uptime robot logs."
+msgstr ""
+"Gebruik deze shortcode om je uptime robot logs te plaatsen in een pagina of "
+"bericht."
+
+#: ../ur-logs.php:31
+msgid "down"
+msgstr "offline"
+
+#: ../ur-logs.php:33
+msgid "up"
+msgstr "online"
+
+#: ../ur-logs.php:35
+msgid "paused"
+msgstr "gepauzeerd"
+
+#: ../ur-logs.php:37
+msgid "started"
+msgstr "gestart"
+
+#: ../ur-logs.php:50 ../ur-status.php:105
+#, fuzzy
+msgid "You can change the settings for this widget on the plugin"
+msgstr ""
+"Je kunt de instellingen voor deze widget aanpassen op de plugin pagina."
+
+#: ../ur-logs.php:50 ../ur-status.php:105
+#, fuzzy
+msgid "settings page"
+msgstr "API instellingen"
+
+#: ../ur-status.php:10
+msgid "Type"
+msgstr "Type"
+
+#: ../ur-status.php:43
+msgid "Paused"
+msgstr "Gepauzeerd"
+
+#: ../ur-status.php:46
+msgid "n&#47a"
+msgstr "n&#47a"
+
+#: ../ur-status.php:51
+msgid "HTTP(s)"
+msgstr "HTTP(s)"
+
+#: ../ur-status.php:53
+msgid "Keyword"
+msgstr "Keyword"
+
+#: ../ur-status.php:55
+msgid "PING"
+msgstr "PING"
+
+#: ../ur-status.php:57
+msgid "SSL"
+msgstr "SSL"
+
+#: ../ur-status.php:59 ../ur-status.php:69 ../ur-status.php:71
+msgid "PORT"
+msgstr "POORT"
+
+#: ../ur-status.php:61
+msgid "FTP"
+msgstr "FTP"
+
+#: ../ur-status.php:63
+msgid "MAIL"
+msgstr "MAIL"
+
+#: ../ur-status.php:65
+msgid "POP"
+msgstr "POP"
+
+#: ../ur-status.php:67
+msgid "IMAP"
+msgstr "IMAP"
+
+#: ../ur-status.php:96
+msgid ""
+"Realtime monitoring by <a href=\"http://uptimerobot.com/\" target=\"_blank\" "
+"title=\"Uptime Robot Free Website Monitor Service\">Uptime Robot</a>"
+msgstr ""
+"Realtime monitoring door <a href=\"http://uptimerobot.com/\" target=\"_blank"
+"\" title=\"Uptime Robot Free Website Monitor Service\">Uptime Robot</a>"
+
+#: ../ur-status.php:97
+msgid ""
+" Plugin by <a href=\"https://wordpress.org/plugins/uptime-robot-monitor/\" "
+"target=\"_blank\" title=\"Show your uptime stats and logs from Uptime Robot "
+"on your wordpress pages, posts or in a widget.\">Niels Hoogenhout.nl</a>"
+msgstr ""
+" Plugin door <a href=\"https://wordpress.org/plugins/uptime-robot-monitor/\" "
+"target=\"_blank\" title=\"Show your uptime stats and logs from Uptime Robot "
+"on your wordpress pages, posts or in a widget.\">Niels Hoogenhout.nl</a>"
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "Show dashboard"
+#~ msgstr "Dashboard weergeven"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "Not Available"
+#~ msgstr "Niet beschikbaar"
+
+#~ msgid ""
+#~ "Copy your monitor ID's in this field seperated with a You can find your "
+#~ "monitor ID in your adressbar when the monitors dashboard is open."
+#~ msgstr ""
+#~ "Kopieer je monitor id's in dit veld, gescheiden met een -. Je vind je "
+#~ "monitor ID in je adresbalk wanneer je monitor dashbord open is op "
+#~ "uptimerobot.com"
+
+#~ msgid "Laatste jaar"
+#~ msgstr "Laatste jaar"
